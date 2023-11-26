@@ -1,0 +1,8 @@
+CHIP Subtract16 {
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+    opposite(in=b, out=oppB);
+    Add16(a=a, b=oppB, out=out);    
+}
